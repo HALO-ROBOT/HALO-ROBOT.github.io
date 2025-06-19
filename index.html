@@ -7,44 +7,74 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Scroll Progress Bar -->
-  <div id="scroll-progress"></div>
-
-  <!-- Parallax Hero -->
-  <header class="parallax-hero">
-    <div class="hero-content">
-      <h1>
-        <span style="color:red">H</span><span style="color:green">A</span>
-        <span style="color:blue">L</span><span style="color:orange">O</span>
-      </h1>
-      <h2>Long Horizon Latent Action Learning for General Robot Manipulation</h2>
-      <p><em>Authors</em></p>
-    </div>
-  </header>
-
-  <section class="content">
-    <!-- Your existing sections go here -->
-    <h2>Abstract</h2>
-    <!-- ... -->
-    <h2>Model Architecture</h2>
-    <img src="assets/images/overview.JPG" alt="HALO Model Architecture" class="fullwidth">
-    <p>HALO integrates a pretrained VLM...</p>
-
-    <!-- Continue with rest of content -->
-    <h2>Key Contributions</h2>
-    <!-- ... -->
-    <h2>Experimental Results</h2>
-    <!-- ... -->
-    <h2>Task Visualization</h2>
-    <!-- ... -->
-    <h2>Demo Video</h2>
-    <!-- ... -->
-    <p style="text-align: center;">
-      <a href="halo.pdf">Download Paper (PDF)</a> |
-      <a href="https://github.com/NsurrenderX/gcr_lerobot_2">GitHub Repo</a>
-    </p>
+  <section class="hero">
+    <h1>
+      <span style="color:red">H</span><span style="color:green">A</span><span style="color:blue">L</span><span style="color:orange">O</span>
+    </h1>
+    <h2>Long Horizon Latent Action Learning for General Robot Manipulation</h2>
+    <p><em>NeurIPS 2025 Submission</em></p>
   </section>
 
-  <script src="script.js"></script>
+  <section class="content">
+    <h2>Abstract</h2>
+    <p>
+      Robotic manipulation often requires understanding long-horizon tasks guided by visual observations and language instructions.
+      However, most existing Vision-Language-Action (VLA) models focus primarily on short-horizon tasks and overlook the rich historical video context,
+      limiting their ability to perform complex, multi-step tasks.
+      Moreover, these models often suffer from weak alignment between pre-trained vision-language embeddings and robotic actions,
+      which hinders the effective extraction of action-relevant priors from visual input and leads to inaccurate action generation.
+      In this paper, we propose a novel Long <strong style="color:red">H</strong>orizon Latent <strong style="color:green">A</strong>ction <strong style="color:blue">L</strong>earning framework for general r<strong style="color:orange">o</strong>bot manipulation,
+      <strong>HALO</strong>, which enables robots to perform multi-step tasks by integrating long-term visual observations, multi-view camera images,
+      and natural language instructions.
+    </p>
+
+    <h2>Model Architecture</h2>
+    <img src="assets/images/overview.JPG" alt="HALO Model Architecture" class="fullwidth">
+    <p>
+      HALO integrates a pretrained VLM, a state-aware latent re-representation module, and an action expert to generate multi-step robot actions.
+    </p>
+    <img src="assets/images/attention.JPG" alt="Attention Mechanism" class="fullwidth">
+    <p>
+      The attention mechanism allows HALO to focus on relevant parts of the visual input while generating actions.
+    </p>
+
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Supports long-horizon visual-linguistic context</li>
+      <li>State-aware latent re-representation for cross-modal alignment</li>
+      <li>10B parameter scale trained on 1M+ robot episodes</li>
+      <li>Outperforms RT-2-X and pi0 in both simulation and real-world</li>
+    </ul>
+
+    <h2>Experimental Results</h2>
+    <table>
+      <caption>Success Rates on SIMPLER (Google Robot)</caption>
+      <thead>
+        <tr><th>Method</th><th>Single-Step Avg</th><th>Multi-Step Avg</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>RT-2-X</td><td>78.7%</td><td>3.7%</td></tr>
+        <tr><td>pi0</td><td>87.3%</td><td>16.0%</td></tr>
+        <tr><td><strong>HALO (Ours)</strong></td><td><strong>94.3%</strong></td><td><strong>19.4%</strong></td></tr>
+      </tbody>
+    </table>
+    <img src="assets/images/sim_results.png" alt="Comparison Chart" class="fullwidth">
+
+    <h2>Task Visualization</h2>
+    <img src="assets/images/real_word.JPG" alt="Heat the Food Sequence" class="fullwidth">
+    <p>
+      Example long-horizon task: placing a pot in the oven, closing it, setting timer, reopening, and returning pot to table.
+    </p>
+
+    <h2>Demo Video</h2>
+    <video controls class="video">
+      <source src="assets/video/demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p style="text-align: center;">
+      <a href="halo.pdf">Download Paper (PDF)</a> | <a href="https://github.com/HALO-ROBOT/HALO-ROBOT.github.io">GitHub Repo</a>
+    </p>
+  </section>
 </body>
 </html>
