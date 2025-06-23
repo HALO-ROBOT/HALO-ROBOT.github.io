@@ -6,6 +6,12 @@ body {
   color: #222;
   line-height: 1.6;
 }
+
+.title-icon {
+    height: 2rem; /* Set a fixed height for the icon */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 0.75rem; /* Add space between icon and text */
+}
 /* General styling for the hero section */
 .hero {
     text-align: center;
@@ -17,7 +23,7 @@ body {
     font-size: 2.8rem;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
 }
 
 /* HALO subtitle style */
@@ -25,6 +31,10 @@ body {
     font-family: monospace;
     font-size: 2rem;
     margin-bottom: 2rem;
+    /* Added flex for icon alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Container for author names */
@@ -129,12 +139,7 @@ body {
   margin: 20px auto;
   max-width: 100%;
 }
-.video {
-  display: block;
-  margin: 40px auto;
-  max-width: 100%;
-  height: auto;
-}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -150,3 +155,36 @@ caption {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+
+/* --- START: Video Gallery Styles --- */
+.video-gallery {
+  margin-top: 60px;
+}
+
+.video-category {
+  margin-bottom: 40px; /* Space between categories */
+}
+
+.video-category h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.video-row {
+  display: grid;
+  /* Creates 3 columns on larger screens, 2 on medium, 1 on small */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Space between videos */
+}
+
+.video-row video {
+  width: 100%; /* Make video fill its container */
+  height: auto;
+  border-radius: 8px; /* Optional: adds rounded corners */
+  background-color: #000;
+}
+
+/* --- END: Video Gallery Styles --- */
