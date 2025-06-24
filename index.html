@@ -1,175 +1,514 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HALO</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Long Horizon Latent Action Learning framework for general robot manipulation">
+  <meta name="keywords" content="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Long Horizon Latent Action Learning framework for general robot manipulation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
 <section class="hero">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <!-- Replaced the H1 text with the generated image -->
-      <div class="publication-title">
-          <img src="assets/images/halo_betterbak.png" alt="HALO Robot Logo">
-      </div>
-      <!-- Thesis subtitle -->
-    <h2 class="title is-4 publication-subtitle">
-        <!-- New Icon Added Here -->
-        <img src="assets/images/halo-icon.png" alt="HALO robot icon" class="title-icon">
-        <!-- Title text wrapped in a span for alignment -->
-        <span>
-            Long <span style="color:#d9534f;">H</span>orizon Latent <span style="color:#5cb85c;">A</span>ction <span style="color:#4285f4;">L</span>earning framework for general r<span style="color:#f0ad4e;">o</span>bot manipulation
-        </span>
-      </h2>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Long Horizon Latent Action Learning framework for general robot manipulation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Author1</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Author2</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Author3</a><sup>2</sup>,
+            </span>
+          </div>
 
-      <div class="authors">
-        <span class="author">Author1<sup>*,1,2</sup></span>,
-        <span class="author">Author2<sup>*,1,2</sup></span>,
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Institution1</span>
+            <span class="author-block"><sup>2</sup>Institution2</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="halo.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="..."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/NsurrenderX/gcr_lerobot_2"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+
+          </div>
         </div>
-
-      <div class="affiliations">
-        <span class="affiliation"><sup>1</sup>Your First Institution</span>
-        <span class="affiliation"><sup>2</sup>Your Second Institution</span>
-        <span class="affiliation"><sup>3</sup>Your Third Institution</span>
       </div>
-
-      <div class="contribution-notes">
-          <p><sup>*</sup>Equal Contribution &nbsp;&nbsp;&nbsp;&nbsp; <sup>†</sup>Corresponding Author</p>
-      </div>
-
-      <div class="acceptance-line">
-        <p>Accepted by 
-          <!-- <strong>ICML 2025</strong></p> -->
-      </div>
-
-      <div class="links-container">
-        <a href="halo.pdf" class="button">📄 Paper</a>
-        <a href="https://github.com/NsurrenderX/gcr_lerobot_2" class="button">💻 Code</a>
-        <a href="#" class="button">📖 arXiv</a>
-      </div>
-
     </div>
   </div>
 </section>
 
-  <section class="content">
-    <h2>Abstract</h2>
-    <p>
-      Robotic manipulation often requires understanding long-horizon tasks guided by visual observations and language instructions.
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="static/videos/libero_goal/"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">
+          long video here<br>
+          HALO</span> is a Long Horizon Latent Action Learning framework for general robot manipulation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=1--success=True--task=open_the_middle_drawer_of_the_cabinet.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=236--success=True--task=put_the_bowl_on_top_of_the_cabinet.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=286--success=True--task=push_the_plate_to_the_front_of_the_stove.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=362--success=True--task=turn_on_the_stove.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=320--success=True--task=put_the_cream_cheese_in_the_bowl.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=410--success=True--task=put_the_bowl_on_the_plate.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=102--success=True--task=put_the_wine_bottle_on_top_of_the_cabinet.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/libero_goal/2025_06_10-03_26_00--episode=461--success=True--task=put_the_wine_bottle_on_the_rack.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>      Robotic manipulation often requires understanding long-horizon tasks guided by visual observations and language instructions.
       However, most existing Vision-Language-Action (VLA) models focus primarily on short-horizon tasks and overlook the rich historical video context,
-      limiting their ability to perform complex, multi-step tasks.
-      Moreover, these models often suffer from weak alignment between pre-trained vision-language embeddings and robotic actions,
+      limiting their ability to perform complex, multi-step tasks.</p>
+            <p>      Moreover, these models often suffer from weak alignment between pre-trained vision-language embeddings and robotic actions,
       which hinders the effective extraction of action-relevant priors from visual 
-      input and leads to inaccurate action generation.
-      In this paper, we propose a novel Long <strong style="color:red">H</strong>orizon 
+      input and leads to inaccurate action generation.</p>
+<p>      In this paper, we propose a novel Long <strong style="color:red">H</strong>orizon 
       Latent <strong style="color:green">A</strong>ction <strong style="color:blue">L</strong>earning framework for general r<strong style="color:orange">O</strong>bot manipulation,
           <strong style="color:red">H</strong><strong style="color:green">A</strong><strong style="color:blue">L</strong><strong style="color:orange">O</strong>, which enables robots to perform multi-step tasks by integrating long-term visual observations, multi-view camera images,
-      and natural language instructions.
-    </p>
-
-    <h2>Model Architecture</h2>
-    <img src="assets/images/overview.JPG" alt="HALO Model Architecture" class="fullwidth">
-    <p>
-      HALO integrates a pretrained VLM, a state-aware latent re-representation module, and an action expert to generate multi-step robot actions.
-    </p>
-    <img src="assets/images/attention.JPG" alt="Attention Mechanism" class="fullwidth">
-    <p>
-      The attention mechanism allows HALO to focus on relevant parts of the visual input while generating actions.
-    </p>
-
-    <h2>Key Contributions</h2>
+      and natural language instructions.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<!-- Key Contribution -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contribution</h2>
+        <div class="content has-text-justified">
     <ul>
       <li>Supports long-horizon visual-linguistic context</li>
       <li>State-aware latent re-representation for cross-modal alignment</li>
       <li>10B parameter scale trained on 1M+ robot episodes</li>
       <li>Outperforms RT-2-X and pi0 in both simulation and real-world</li>
     </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
-    <h2>Experimental Results</h2>
-    <img src="assets/images/simpler results.JPG" alt="Comparison Chart" class="fullwidth">
-    <img src="assets/images/libreo results.JPG" alt="table of libreo results" class="fullwidth">
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section> 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Model Architecture</h2>
+    <img src="static/images/overview.JPG" alt="HALO Model Architecture" class="fullwidth">
+    <div class="prompt-text">
+    <p>
+      HALO integrates a pretrained VLM, a state-aware latent re-representation module, and an action expert to generate multi-step robot actions.
+    </p>
+    </div>
+
+    <img src="static/images/attention.JPG" alt="Attention Mechanism" class="fullwidth">
+    <div class="prompt-text">
+    <p>
+      The attention mechanism allows HALO to focus on relevant parts of the visual input while generating actions.
+    </p>
+    </div>
+
+        </div>
+      </div>
+    </div>
+</section>
+      <!-- Experimental Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Experimental Results</h2>
+    <img src="static/images/simpler results.JPG" alt="Comparison Chart" class="fullwidth">
+    <img src="static/images/libreo results.JPG" alt="table of libreo results" class="fullwidth">
         <p>
       HALO outperforms existing models like RT-2-X and pi0 in both simulation and real-world tasks, demonstrating superior long-horizon task performance.
     </p>
-    <h2>Task Visualization</h2>
-    <img src="assets/images/real_word.JPG" alt="Heat the Food Sequence" class="fullwidth">
-    <p>
-      Example long-horizon task: <br>
-      (a) Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
+    </div>
+        </div>
+      </div>
+</section>
+
+
+<!-- Task Visualization -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+          <h2 class="title is-3">Task Visualization</h2>
+          Example long-horizon task: <br>
+    <img src="static/images/real_word_a.JPG" alt="Heat the Food Sequence" class="fullwidth">
+    <div class="prompt-text">
+    Open the oven, pick up the bowl, pour the bowl of food into pot, put the pot in the oven and close the oven.
+    </div>
+
       <br>
-      (b) Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
-    </p>
+    <img src="static/images/real_word_b.JPG" alt="Heat the Food Sequence" class="fullwidth">
+    <div class="prompt-text">
+      Put the pot in the oven, close the oven, set the timer, open the oven and put the potbackon the table.
 
-
-
-    <div class="video-gallery">
-    <h2>Demo Video</h2>
-      <!-- Category: Libero Long -->
-      <div class="video-category">
-        <h3>
-          Put both the alphabet soup and the tomato sauce in, turn on the stove and put the moka pot on it, put the white mug on the left plate and put the yellow mug on the right plate.
-        </h3>
-        <div class="video-row">
-          <video controls>
-            <source src="assets\videos\libero_long\2025_06_07-05_56_22--episode=1--success=True--task=put_both_the_alphabet_soup_and_the_tomato_sauce_in.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_long/2025_06_07-05_56_22--episode=108--success=True--task=turn_on_the_stove_and_put_the_moka_pot_on_it.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_long/2025_06_07-05_56_22--episode=208--success=True--task=put_the_white_mug_on_the_left_plate_and_put_the_ye.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    </div>
         </div>
       </div>
-    
-      <div class="video-category">
-        <h3>
-          Open the middle drawer of the cabinet, put the bowl on top of the cabinet, and put the wine bottle on the rack.
-        </h3>
-        <div class="video-row">
-          <video controls>
-            <source src="assets\videos\libero_goal\2025_06_10-03_26_00--episode=1--success=True--task=open_the_middle_drawer_of_the_cabinet.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_goal/2025_06_10-03_26_00--episode=236--success=True--task=put_the_bowl_on_top_of_the_cabinet.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_goal/2025_06_10-03_26_00--episode=461--success=True--task=put_the_wine_bottle_on_the_rack.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-            <div class="video-category">
-        <h3>
-          Pick up the alphabet soup and place it in the basket, pick up the cream cheese and place it in the basket, pick up the milk and place it in the basket.
-        </h3>
-        <div class="video-row">
-          <video controls>
-            <source src="assets\videos\libero_object/2025_06_10-14_06_42--episode=1--success=True--task=pick_up_the_alphabet_soup_and_place_it_in_the_bask.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_object/2025_06_10-14_06_42--episode=63--success=True--task=pick_up_the_cream_cheese_and_place_it_in_the_baske.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <video controls>
-            <source src="assets/videos/libero_object/2025_06_10-14_06_42--episode=375--success=True--task=pick_up_the_milk_and_place_it_in_the_basket.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+    </div>
+</section>
+      <!--/ Visual Effects. -->
 
-    <p style="text-align: center;">
-      <a href="halo.pdf">Download Paper (PDF)</a> | <a href="https://github.com/HALO-ROBOT/HALO-ROBOT.github.io">GitHub Repo</a>
-    </p>
-  </section>
+      <!-- Matting. -->
+      <!-- <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+    <!--/ Matting. -->
+
+    <!-- Animation. -->
+    <!-- <div class="columns is-centered"> -->
+      <!-- <div class="column is-full-width"> -->
+        <!-- <h2 class="title is-3">Animation</h2> -->
+
+        <!-- Interpolating. -->
+        <!-- <h3 class="title is-4">Interpolating states</h3> -->
+        <!-- <div class="content has-text-justified"> -->
+          <!-- <p>
+            We can also animate the scene by interpol/ating the deformation latent codes of two input
+            frames. Use the slider here to linearly interpolate between the left frame and the right
+            frame.
+          </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel"> -->
+          <!-- <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div> -->
+          <!-- <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div>
+        <br/> -->
+        <!--/ Interpolating. -->
+
+        <!-- Re-rendering. -->
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
+<!-- 
+      </div>
+    </div> -->
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+<!-- 
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="halo.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/NsurrenderX/gcr_lerobot_2" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="footer-text">
+This template is borrowed from <a href="https://nerfies.github.io/">NERFIES</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
-
