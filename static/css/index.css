@@ -31,6 +31,16 @@ body {
        padding-bottom: 3rem;
     }
 
+    /* No longer using flexbox here to allow for natural text wrapping */
+    .publication-title {
+    }
+
+    .title-icon {
+      height: 3.5rem; /* Controls the height of the icon */
+      width: auto;   /* Maintains aspect ratio */
+      margin-right: 0rem; /* Space between icon and title text */
+      vertical-align: middle; /* Vertically aligns the icon with the title text */
+    }
     .main-halo-logo {
       max-width: 650px; /* Controls the size of the main logo */
       margin: 0 auto 1rem auto; /* Centers the logo and adds space below it */
@@ -47,9 +57,6 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
-.publication-title {
-}
 
 .publication-banner {
   max-height: parent;
