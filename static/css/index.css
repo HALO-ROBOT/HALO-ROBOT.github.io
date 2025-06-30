@@ -116,7 +116,7 @@ body {
 
 .publication-video {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 0;
     padding-bottom: 56.25%;
 
@@ -128,7 +128,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
@@ -152,7 +152,15 @@ body {
   margin: 0;
 }
 
-
+/* Add this new class to your CSS file */
+.video-grid-columns {
+  /* Sets a maximum width for the video row. Adjust this value to your liking. */
+  max-width: 10px; 
+  
+  /* Centers the container horizontally on the page */
+  margin-left: auto;
+  margin-right: auto;
+}
 .interpolation-panel {
   background: #f5f5f5;
   border-radius: 10px;
@@ -171,7 +179,7 @@ body {
 }
 
 .interpolation-panel .slider {
-  margin: 0 !important;
+  margin: 10 !important;
 }
 
 #interpolation-image-wrapper {
